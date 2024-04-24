@@ -12,10 +12,8 @@
     <div class="navbar">
         <a href="Inicio.aspx">Inicio</a>
         <a href="AgregarArrendatario.aspx">Agregar Arrendatario</a>
-        <a href="#">Agregar Arrendador</a>
+        <a href="AgregarArrendador.aspx">Agregar Arrendador</a>
         <a href="#">Pagos</a>
-        <a href="#">Informacion Almacenada</a>
-        <a href="Propiedades.aspx">Propiedades</a>
     </div>
 </body>
 </html>

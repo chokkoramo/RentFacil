@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AgregarArrendador.aspx" />
     <Content Include="AgregarArrendatario.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Inicio.aspx" />
@@ -74,6 +75,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgregarArrendador.aspx.cs">
+      <DependentUpon>AgregarArrendador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AgregarArrendador.aspx.designer.cs">
+      <DependentUpon>AgregarArrendador.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AgregarArrendatario.aspx.cs">
       <DependentUpon>AgregarArrendatario.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
