@@ -99,6 +99,7 @@
     <Compile Include="Inicio.aspx.designer.cs">
       <DependentUpon>Inicio.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Models\Arrendador.cs" />
     <Compile Include="Models\Arrendatario.cs" />
     <Compile Include="Models\Contratos.cs" />
     <Compile Include="Models\Propiedad.cs" />
