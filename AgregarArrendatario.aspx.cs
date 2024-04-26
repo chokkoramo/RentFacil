@@ -52,6 +52,14 @@ namespace RentFacil
             string correo = txtCorreo.Text;
             string contrato = ddlContratos.SelectedItem.Text;
 
+            if (string.IsNullOrEmpty(nombre) || string.IsNullOrEmpty(direccion))
+            {
+                string mensaje = "Por favor, complete todos los campos.";
+                string script = $"<script type='text/javascript'>alert('{mensaje}');</script>";
+                ClientScript.RegisterStartupScript(this.GetType(), "alert", script);
+                return;
+            }
+
             Arrendatario arrendatario1 = new Arrendatario(idArrendatario, nombre, direccion, correo);
             listaArrendatarios.Add(arrendatario1);
 

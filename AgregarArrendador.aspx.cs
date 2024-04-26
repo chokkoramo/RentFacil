@@ -48,6 +48,14 @@ namespace RentFacil
             string direccion = txtDireccionArrendador.Text;
             int idPropiedad = Convert.ToInt32(ddlPropiedades.SelectedItem.Text);
 
+            if (string.IsNullOrEmpty(nombre) || string.IsNullOrEmpty(direccion))
+            {
+                string mensaje = "Por favor, complete todos los campos.";
+                string script = $"<script type='text/javascript'>alert('{mensaje}');</script>";
+                ClientScript.RegisterStartupScript(this.GetType(), "alert", script);
+                return;
+            }
+
             Arrendador nuevoArrendador = new Arrendador(nombre, direccion);
             listaArrendadores.Add(nuevoArrendador);
 
