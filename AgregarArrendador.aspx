@@ -34,12 +34,19 @@
             </div>
             <div class="form_input">
                 <asp:Label AssociatedControlID="ddlPropiedades" ID="label3" runat="server" Text="Contrato"></asp:Label>
-                <asp:DropDownList ID="ddlPropiedades" runat="server" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged"></asp:DropDownList>
+                <asp:DropDownList ID="ddlPropiedades" runat="server" OnSelectedIndexChanged="ddlPropiedades_SelectedIndexChanged"></asp:DropDownList>
             </div>
             <div class="form_input">
                 <asp:Button ID="BtnGuardar" runat="server" Text="Guardar" OnClick="BtnGuardar_Click" />
             </div>
         </fieldset>
+        </div>
+        <div>
+        <asp:GridView ID="GridViewArrendatarios" runat="server" AutoGenerateColumns="false">
+           <Columns>
+
+            </Columns>
+        </asp:GridView>
         </div>
     </form>
 </body>

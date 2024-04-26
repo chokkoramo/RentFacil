@@ -1,25 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Collections.Generic;
 
 namespace RentFacil.Models
 {
     public class Arrendador
     {
-        private string nombre;
-        private string direccion;
-        private List<Propiedad> propiedades;
+        public string Nombre { get; set; }
+        public string Direccion { get; set; }
+        public List<Propiedad> Propiedades { get; set; }
 
-        public Arrendador(string nombre, string direccion, List<Propiedad> propiedades)
+        public Arrendador(string nombre, string direccion)
         {
-            this.nombre = nombre;
-            this.direccion = direccion;
-            this.propiedades = propiedades;
+            Nombre = nombre;
+            Direccion = direccion;
+            Propiedades = new List<Propiedad>();
         }
-
-        public string Nombre { get => nombre; set => nombre = value; }
-        public string Direccion { get => direccion; set => direccion = value; }
-        public List<Propiedad> Propiedades { get => propiedades; set => propiedades = value; }
     }
 }
