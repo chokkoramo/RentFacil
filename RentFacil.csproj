@@ -71,7 +71,7 @@
     <Content Include="AgregarArrendatario.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Inicio.aspx" />
-    <Content Include="Styles\estilos.css" />
+    <Content Include="Styles\style.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

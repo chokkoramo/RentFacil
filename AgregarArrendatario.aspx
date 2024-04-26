@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <link href="Styles/estilos.css" rel="stylesheet" />
+    <link href="Styles/style.css" rel="stylesheet" />
     <title>Agregar Arrendatario</title>
 </head>
 <body>
@@ -14,8 +14,8 @@
         <a href="AgregarArrendador.aspx">Agregar Arrendador</a>
         <a href="#">Pagos</a>
     </div>
-    <form id="form1" runat="server">
-        <div>
+    <form runat="server">
+        <div class="form1">
         <h2>Formulario Arrendatario</h2>
         <fieldset>
             <legend>INFORMACION BASICA</legend>
@@ -45,7 +45,7 @@
         </fieldset>
         </div>
         <div>
-        <asp:GridView ID="GridViewArrendatarios" runat="server" AutoGenerateColumns="false">
+            <asp:GridView ID="GridViewArrendatarios" runat="server" AutoGenerateColumns="false" OnSelectedIndexChanged="GridViewArrendatarios_SelectedIndexChanged">
            <Columns>
                     <asp:BoundField DataField="Id" HeaderText="Identificación" SortExpression="Id" />
                     <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
@@ -57,9 +57,9 @@
         </div>
 
         <h1>Listado de Propiedades</h1>
-    <div class="form_input">
+    <div class="prop-container">
         <% foreach (var propiedad in propiedadDatos) { %>
-            <div class="form1">
+            <div class="prop">
                 <h3>Propiedad ID: <%= propiedad.IdPropiedad %></h3>
                 <p>Área: <%= propiedad.Area %> m²</p>
                 <p>Habitaciones: <%= propiedad.NroHabitaciones %></p>

@@ -6,6 +6,7 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <link href="Styles/estilos.css" rel="stylesheet" />
+    <link href="Styles/style.css" rel="stylesheet" />
     <title></title>
 </head>
 <body>

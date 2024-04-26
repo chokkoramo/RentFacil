@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <link href="Styles/estilos.css" rel="stylesheet" />
+    <link href="Styles/style.css" rel="stylesheet" />
     <title>Agregar Arrendador</title>
 </head>
 <body>
@@ -33,7 +33,7 @@
                 <asp:TextBox ID="txtCorreoArrendador" type="email" placeholder="example@gmail.com" runat="server"></asp:TextBox>
             </div>
             <div class="form_input">
-                <asp:Label AssociatedControlID="ddlPropiedades" ID="label3" runat="server" Text="Contrato"></asp:Label>
+                <asp:Label AssociatedControlID="ddlPropiedades" ID="label3" runat="server" Text="Propiedades"></asp:Label>
                 <asp:DropDownList ID="ddlPropiedades" runat="server" OnSelectedIndexChanged="ddlPropiedades_SelectedIndexChanged"></asp:DropDownList>
             </div>
             <div class="form_input">
@@ -42,10 +42,7 @@
         </fieldset>
         </div>
         <div>
-        <asp:GridView ID="GridViewArrendatarios" runat="server" AutoGenerateColumns="false">
-           <Columns>
-
-            </Columns>
+        <asp:GridView ID="GridViewArrendador" runat="server" OnSelectedIndexChanged="GridViewArrendador_SelectedIndexChanged">
         </asp:GridView>
         </div>
     </form>

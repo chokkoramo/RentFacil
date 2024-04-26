@@ -33,7 +33,7 @@ namespace RentFacil
                 }
 
                 var propiedades = (List<Propiedad>)ViewState["Propiedades"];
-                var contratosAleatorios = Contratos.GenerarDatosAleatorios(10, propiedades);
+                
                 var propiedadesDisponiblesViewState = ((List<Propiedad>)ViewState["Propiedades"]).OrderBy(p => p.IdPropiedad).ToList();
                 var propiedadesDisponiblesFiltradas = propiedadesDisponiblesViewState.Where(p => p.Disponible).ToList();
 
@@ -77,6 +77,11 @@ namespace RentFacil
         }
 
         protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void GridViewArrendatarios_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
