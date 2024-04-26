@@ -1,12 +1,13 @@
 ﻿html {
     height: 100%;
+    width: 100%;
 }
 
 body {
     margin: 0;
     font-family: sans-serif;
     color: #ddd;
-    background: linear-gradient(to bottom, #eee, #000);
+    background: linear-gradient(to bottom, #000, #666) fixed;
 }
 
 .form1 {
@@ -48,26 +49,9 @@ input, textarea, select {
     color: #eee;
 }
 
-option {
-    background-color: #222;
-    /*COLOR Y BACKGROUND NO RECIBE MAS*/
-}
-
-textarea {
-    min-width: 100%;
-    resize: none; /*HACIA DONDE SE VA  REDIMENCIONAR*/
-    min-height: 102px;
-    font-family: sans-serif;
-}
-
 label {
     font-size: 0.88em;
     line-height: 2;
-}
-
-.checkbox {
-    width: auto;
-    height: 10px;
 }
 
 fieldset {

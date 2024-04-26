@@ -56,11 +56,10 @@
         </asp:GridView>
         </div>
 
-    </form>
         <h1>Listado de Propiedades</h1>
-    <div>
+    <div class="form_input">
         <% foreach (var propiedad in propiedadDatos) { %>
-            <div style="border: 1px solid #ccc; padding: 10px; margin-bottom: 10px;">
+            <div class="form1">
                 <h3>Propiedad ID: <%= propiedad.IdPropiedad %></h3>
                 <p>Área: <%= propiedad.Area %> m²</p>
                 <p>Habitaciones: <%= propiedad.NroHabitaciones %></p>
@@ -69,5 +68,6 @@
             </div>
         <% } %>
     </div>
+    </form>
 </body>
 </html>

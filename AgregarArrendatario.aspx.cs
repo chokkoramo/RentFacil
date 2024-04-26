@@ -13,7 +13,7 @@ namespace RentFacil
         public List<Propiedad> propiedadDatos;
         protected void Page_Load(object sender, EventArgs e)
         {
-            propiedadDatos = Propiedad.DatosPropiedad(10);
+            propiedadDatos = Propiedad.DatosPropiedad();
             if (!IsPostBack)
             {
                 DataTable dt = new DataTable();
@@ -29,7 +29,7 @@ namespace RentFacil
 
                 if (ViewState["Propiedades"] == null)
                 {
-                    ViewState["Propiedades"] = Propiedad.DatosPropiedad(10);
+                    ViewState["Propiedades"] = Propiedad.DatosPropiedad();
                 }
 
                 var propiedades = (List<Propiedad>)ViewState["Propiedades"];
@@ -42,10 +42,8 @@ namespace RentFacil
                 ddlContratos.DataValueField = "IdPropiedad";
                 ddlContratos.DataBind();
             }
-
-
         }
-
+              
         protected void BtnGuardar_Click(object sender, EventArgs e)
         {
             int idArrendatario = Convert.ToInt32(txtID.Text);
@@ -57,12 +55,25 @@ namespace RentFacil
             Arrendatario arrendatario1 = new Arrendatario(idArrendatario, nombre, direccion, correo);
             listaArrendatarios.Add(arrendatario1);
 
+            var propiedadSeleccionada = propiedadDatos.FirstOrDefault(p => p.IdPropiedad == Convert.ToInt32(contrato));
+            if (propiedadSeleccionada != null)
+            {
+                propiedadSeleccionada.Disponible = false;
+                ddlContratos.Items.Remove(ddlContratos.SelectedItem);
+            }
+            else
+            {
+                ddlContratos.Items.Clear();
+                ddlContratos.Items.Add(new ListItem("Null", "-1"));
+            }
+
             DataTable dt = (DataTable)ViewState["Arrendatario"];
             dt.Rows.Add(idArrendatario, nombre, direccion, correo, contrato);
             ViewState["Arrendatario"] = dt;
 
             GridViewArrendatarios.DataSource = dt;
             GridViewArrendatarios.DataBind();
+
         }
 
         protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
