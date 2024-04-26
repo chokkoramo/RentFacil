@@ -9,13 +9,81 @@ body {
     background: linear-gradient(#333, #000) fixed;
 }
 
+.navbar {
+    background-color: #333; 
+    border-bottom: 2px solid #666; 
+    box-shadow: 0 2px 15px #0009; 
+    padding: 10px 15px; 
+    display: flex; 
+    justify-content: safe center; 
+    flex-wrap: wrap;
+    align-items: center; 
+    position: fixed;
+    width: 100%; 
+    top: 0; 
+    z-index: 1000; 
+}
+
+.navbar a {
+    color: #ddd; 
+    text-decoration: none; 
+    padding: 8px 15px; 
+    border-radius: 4px; 
+    transition: background-color 0.3s; 
+}
+
+.navbar a:hover {
+    background-color: #555; 
+}
+
+
+.navbar-brand {
+    font-weight: bold; 
+    font-size: 1.5em; 
+    color: #eee; 
+}
+
+
+.nav-items {
+    display: flex; 
+    list-style: none;
+}
+
+
+.nav-item {
+    margin: 0 10px; 
+}
+
+.main-header h1 {
+    color: #eee;
+    text-align: center;
+    font-size: 2.5em;
+    margin-top: 100px; 
+}
+
+.tagline {
+    color: #bbb;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.description {
+    color: #ddd;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1em;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .form1 {
     background-color: transparent;
     padding: 20px 0 0 0;
     max-width: 500px;
     margin: auto;
     box-shadow: 0 0 55px #fff2;
-    margin-top: 50px;
+    margin-top: 80px;
     border-radius: 8px;
     font-size: 16px;
     margin-bottom: 40px;
@@ -47,6 +115,11 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
     background-color: #555;
+}
+
+h1{
+    text-align: center;
+    padding: 10px 0;
 }
 
 h2 {
@@ -83,23 +156,21 @@ form{
 }
 
 .prop {
-    width: calc(50% - 20px); /* Ancho del 50% menos el espacio entre tarjetas */
-    margin-bottom: 20px; /* Espacio entre las tarjetas */
-    padding: 15px; /* Espacio interno de la tarjeta */
-    border: 1px solid #ccc; /* Borde alrededor de la tarjeta */
-    border-radius: 8px; /* Esquinas redondeadas */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra */
-    box-sizing: border-box; /* Incluir el borde en el ancho de la tarjeta */
+    width: calc(50% - 20px); 
+    margin-bottom: 20px; 
+    padding: 15px; 
+    border: 1px solid #ccc; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    box-sizing: border-box; 
 }
 
-/* Para la primera tarjeta de cada fila */
 .prop:nth-child(odd) {
-    margin-right: 20px; /* Ajuste de margen derecho para la tarjeta impar */
+    margin-right: 20px; 
 }
 
-/* Para la última tarjeta de cada fila */
 .prop:nth-child(even) {
-    margin-left: 20px; /* Ajuste de margen izquierdo para la tarjeta par */
+    margin-left: 20px; 
 }
 
 label {
@@ -108,7 +179,7 @@ label {
 }
 
 fieldset {
-    margin: 20px 0;
+    margin: 20px 0 0 0;
     border: 1px solid #ddd6;
     border-radius: 5px;
 }
@@ -120,4 +191,81 @@ legend {
     border-radius: 5px;
     padding: 2px;
     text-align: center;
+}
+
+
+#GridViewArrendatarios {
+    width: 100%; 
+    border-collapse: collapse; 
+    background-color: transparent; 
+    margin: 20px 0; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3); 
+}
+
+
+#GridViewArrendatarios td,
+#GridViewArrendatarios th {
+    border: 1px solid #333;
+    padding: 8px; 
+}
+
+
+#GridViewArrendatarios th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left; 
+    background-color: #774caf; 
+    color: white;
+}
+
+   
+#GridViewArrendatarios tr:hover {
+    background-color: #555;
+}
+
+
+#GridViewArrendatarios tr:nth-child(odd) {
+    background-color: #333; 
+}
+
+#GridViewArrendatarios tr:nth-child(even) {
+    background-color: transparent;
+}
+
+#GridViewArrendador {
+    width: 100%; 
+    border-collapse: collapse; 
+    background-color: transparent; 
+    margin: 20px 0; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3); 
+}
+
+
+#GridViewArrendador td,
+#GridViewArrendador th {
+    border: 1px solid #333;
+    padding: 8px; 
+}
+
+
+#GridViewArrendador th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left; 
+    background-color: #774caf; 
+    color: white;
+}
+
+   
+#GridViewArrendador tr:hover {
+    background-color: #555;
+}
+
+
+#GridViewArrendador tr:nth-child(odd) {
+    background-color: #333; 
+}
+
+#GridViewArrendador tr:nth-child(even) {
+    background-color: transparent;
 }

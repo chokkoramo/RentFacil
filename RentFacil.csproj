@@ -70,6 +70,7 @@
     <Content Include="AgregarArrendador.aspx" />
     <Content Include="AgregarArrendatario.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="InformePagos.aspx" />
     <Content Include="Inicio.aspx" />
     <Content Include="Styles\style.css" />
     <Content Include="Web.config" />
@@ -91,6 +92,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="InformePagos.aspx.cs">
+      <DependentUpon>InformePagos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InformePagos.aspx.designer.cs">
+      <DependentUpon>InformePagos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Inicio.aspx.cs">
       <DependentUpon>Inicio.aspx</DependentUpon>

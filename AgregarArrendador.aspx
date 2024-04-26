@@ -13,10 +13,10 @@
         <a href="Inicio.aspx">Inicio</a>
         <a href="AgregarArrendatario.aspx">Agregar Arrendatario</a>
         <a href="AgregarArrendador.aspx">Agregar Arrendador</a>
-        <a href="#">Pagos</a>
+        <a href="InformePagos.aspx">Pagos</a>
     </div>
-    <form id="form1" runat="server">
-        <div>
+    <form  runat="server">
+        <div class="form1">
         <h2>Formulario Arrendador</h2>
         <fieldset>
             <legend>INFORMACION BASICA</legend>
